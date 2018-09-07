@@ -9,7 +9,7 @@ class Search extends Component {
 
   findTrack = (dispatch,e) => {
     e.preventDefault();
-    axios.get(`https://cors-anywhere.herokuapp.com/http://api.musixmatch.com/ws/1.1/track.search?q_track=${this.state.trackTitle}&page_size=10&apikey=${process.env.REACT_APP_MM_KEY}`)
+    axios.get(`https://cors-anywhere.herokuapp.com/http://api.musixmatch.com/ws/1.1/track.search?q_track=${this.state.trackTitle}&page_size=10&page=1&s_track_rating=desc&apikey=${process.env.REACT_APP_MM_KEY}`)
 
     .then(res => {
         dispatch({
